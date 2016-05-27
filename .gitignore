@@ -1,0 +1,30 @@
+# Created by .ignore support plugin (hsz.mobi)
+# User-specific stuff:
+.idea/
+*.iml
+project/project
+target
+*.log
+.cache/
+.history/
+.lib/
+dist/*
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+.idea_modules/*
+.idea_modules/
+.worksheet
+.settings/
+.classpath
+.project
+.cache
+
+# Java template
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
