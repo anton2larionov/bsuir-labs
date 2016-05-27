@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c:catalogue
+        xmlns:c="catalogue"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="catalogue medicaments.xsd ">
+    <c:medicament c:id="id1">
+        <c:title>Ascorutin</c:title>
+        <c:on-prescription>false</c:on-prescription>
+        <c:purchase-date>2013-11-30</c:purchase-date>
+        <c:description>Аскорутин уменьшает проницаемость и ломкость капилляров.</c:description>
+    </c:medicament>
+    <c:medicament c:id="id2" c:discount="regular">
+        <c:title>Spasmalgon</c:title>
+        <c:on-prescription>true</c:on-prescription>
+        <c:purchase-date>2015-06-12</c:purchase-date>
+        <c:description>Комбинированный анальгетик с ярко выраженной спазмолитической активностью.</c:description>
+    </c:medicament>
+    <c:medicament c:id="id3" c:discount="promotion">
+        <c:title>Choludexan</c:title>
+        <c:on-prescription>true</c:on-prescription>
+        <c:purchase-date>2016-03-07</c:purchase-date>
+        <c:description>Стабилизирует мембраны гепатоцитов и холангиоцитов, оказывает прямое цитопротективное действие.
+        </c:description>
+    </c:medicament>
+    <c:medicament c:id="id4">
+        <c:title>Festal</c:title>
+        <c:on-prescription>false</c:on-prescription>
+        <c:purchase-date>2016-01-30</c:purchase-date>
+    </c:medicament>
+    <c:medicament c:id="id5" c:discount="regular">
+        <c:title>Smecta</c:title>
+        <c:on-prescription>false</c:on-prescription>
+        <c:purchase-date>2015-09-21</c:purchase-date>
+        <c:description>Оказывает адсорбирующее действие.</c:description>
+    </c:medicament>
+</c:catalogue>

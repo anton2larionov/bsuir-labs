@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="catalogue"
+        xmlns:c="catalogue"
+        attributeFormDefault="qualified"
+        elementFormDefault="qualified">
+
+    <element name="catalogue">
+        <complexType>
+            <sequence>
+                <element ref="c:medicament" maxOccurs="unbounded" minOccurs="0"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="medicament">
+        <complexType>
+            <sequence>
+                <element name="title" type="c:TitleType"/>
+                <element name="on-prescription" type="boolean"/>
+                <element name="purchase-date" type="date"/>
+                <element name="description" type="c:DescriptionType" maxOccurs="1" minOccurs="0"/>
+            </sequence>
+            <attribute type="ID" name="id" use="required"/>
+            <attribute type="c:DiscountType" name="discount" use="optional"/>
+        </complexType>
+    </element>
+
+    <simpleType name="TitleType">
+        <restriction base="string">
+            <pattern value="[A-Z]{1}\w{2,49}"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="DescriptionType">
+        <restriction base="string">
+            <maxLength value="1000"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="DiscountType">
+        <restriction base="string">
+            <enumeration value="regular"/>
+            <enumeration value="promotion"/>
+        </restriction>
+    </simpleType>
+
+</schema>
