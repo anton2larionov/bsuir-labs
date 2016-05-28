@@ -2,7 +2,6 @@ package jdbcxml.repository.jdbc;
 
 import org.apache.log4j.Logger;
 
-import java.sql.*;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.BlockingQueue;

@@ -2,7 +2,9 @@ package calculus;
 
 public class Example {
 
-    /** функция f1 */
+    /**
+     * функция f1
+     */
     private static final Function1 f1 = new Function1() {
         @Override
         public double formula(double x) {
@@ -10,7 +12,9 @@ public class Example {
         }
     };
 
-    /** функция f2 */
+    /**
+     * функция f2
+     */
     private static final Function1 f2 = new Function1() {
         @Override
         public double formula(double d) {

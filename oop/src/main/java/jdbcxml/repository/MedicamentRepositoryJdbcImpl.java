@@ -5,7 +5,6 @@ import jdbcxml.data.TagName;
 import jdbcxml.repository.jdbc.ConnectionPool;
 import org.apache.log4j.Logger;
 
-import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;

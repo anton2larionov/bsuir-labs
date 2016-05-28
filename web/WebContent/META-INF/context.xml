@@ -2,20 +2,20 @@
 <!-- The contents of this file will be loaded for each web application -->
 <Context crossContext="true">
 
-	<!-- Default set of monitored resources -->
-	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <!-- Default set of monitored resources -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
 
     <!-- 
     maxTotal - Maximum number of database connections in pool
     maxIdle - Maximum number of idle database connections to retain in pool
     maxWait: Maximum time to wait for a database connection to become available in ms
      -->
-	<Resource name="jdbc/airportdb" auth="Container" type="javax.sql.DataSource"
-		maxTotal="10" 
-		maxIdle="5" 
-		maxWaitMillis="10000" 
-		username="postgres" password="123456" 
-		driverClassName="org.postgresql.Driver"
-		url="jdbc:postgresql://localhost/airportdb" />
-		
+    <Resource name="jdbc/airportdb" auth="Container" type="javax.sql.DataSource"
+              maxTotal="10"
+              maxIdle="5"
+              maxWaitMillis="10000"
+              username="postgres" password="123456"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://localhost/airportdb"/>
+
 </Context>

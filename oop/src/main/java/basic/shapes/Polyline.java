@@ -2,8 +2,6 @@ package basic.shapes;
 
 import basic.shapes.interfaces.Polylineable;
 
-import java.util.*;
-
 /**
  * Полилиния (ломаная)
  */

@@ -9,7 +9,9 @@ import java.util.stream.Collectors;
  * Ячейка матрицы P
  */
 public class Cell {
-    /** список элементов, хранящийся в ячейке */
+    /**
+     * список элементов, хранящийся в ячейке
+     */
     private List<String> list = new LinkedList<>();
 
     /**
@@ -21,6 +23,7 @@ public class Cell {
 
     /**
      * Добавление элемента в ячейку
+     *
      * @param el элемент
      */
     public void addElement(String el) {
@@ -29,6 +32,7 @@ public class Cell {
 
     /**
      * Добавление списка элементов в ячейку
+     *
      * @param timesString список элементов
      */
     public void addElements(List<String> timesString) {

@@ -4,16 +4,21 @@ package hamiltonian;
  * Ребро графа
  */
 public class Edge {
-    /** начальная вершина */
+    /**
+     * начальная вершина
+     */
     private String mFrom;
 
-    /** конечная вершина */
+    /**
+     * конечная вершина
+     */
     private String mTo;
 
     /**
      * Конструктор
+     *
      * @param from начальная вершина
-     * @param to конечная вершина
+     * @param to   конечная вершина
      */
     public Edge(String from, String to) {
         mFrom = from;
