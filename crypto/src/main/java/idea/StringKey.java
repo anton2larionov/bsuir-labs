@@ -1,5 +1,8 @@
 package idea;
 
+/**
+ * Строка-ключ.
+ */
 public final class StringKey {
 
     private String charKey;

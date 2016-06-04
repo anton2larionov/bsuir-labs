@@ -1,12 +1,13 @@
 package idea;
 
-import static idea.Math.add;
-import static idea.Math.mul;
+import static idea.MathUtil.add;
+import static idea.MathUtil.mul;
+import static java.lang.Byte.toUnsignedInt;
 
 /**
  * Алгоритм IDEA (International Data Encryption Algorithm).
  */
-public class Idea {
+public class IDEA {
 
     // число раундов
     public static final int ROUNDS = 8;
@@ -14,7 +15,7 @@ public class Idea {
     // подключи шифрования
     private final int[] subKey;
 
-    public Idea(int[] subKey) {
+    public IDEA(int[] subKey) {
         if (subKey.length != 52) {
             throw new IllegalArgumentException("Число ключей должно быть равно 52.");
         }
@@ -25,13 +26,16 @@ public class Idea {
      * Шифровать или дешифровать блок данных 8 байт.
      *
      * @param data блок данных
-     * @param pos  стартовая позиция
      */
-    public void crypt(byte[] data, int pos) {
-        int x0 = ((data[pos] & 0xFF) << 8) | (data[pos + 1] & 0xFF);
-        int x1 = ((data[pos + 2] & 0xFF) << 8) | (data[pos + 3] & 0xFF);
-        int x2 = ((data[pos + 4] & 0xFF) << 8) | (data[pos + 5] & 0xFF);
-        int x3 = ((data[pos + 6] & 0xFF) << 8) | (data[pos + 7] & 0xFF);
+    public void crypt(byte[] data) {
+        if (data.length != 8) {
+            throw new IllegalArgumentException("Число байт должно быть равно 8.");
+        }
+
+        int x0 = (toUnsignedInt(data[0]) << 8) | toUnsignedInt(data[1]);
+        int x1 = (toUnsignedInt(data[2]) << 8) | toUnsignedInt(data[3]);
+        int x2 = (toUnsignedInt(data[4]) << 8) | toUnsignedInt(data[5]);
+        int x3 = (toUnsignedInt(data[6]) << 8) | toUnsignedInt(data[7]);
         // 8 раундов
         int p = 0;
         for (int round = 0; round < ROUNDS; round++) {
@@ -56,13 +60,13 @@ public class Idea {
         int r2 = add(x1, subKey[p++]);
         int r3 = mul(x3, subKey[p]);
         // выходная информация
-        data[pos] = (byte) (r0 >> 8);
-        data[pos + 1] = (byte) r0;
-        data[pos + 2] = (byte) (r1 >> 8);
-        data[pos + 3] = (byte) r1;
-        data[pos + 4] = (byte) (r2 >> 8);
-        data[pos + 5] = (byte) r2;
-        data[pos + 6] = (byte) (r3 >> 8);
-        data[pos + 7] = (byte) r3;
+        data[0] = (byte) (r0 >> 8);
+        data[1] = (byte) r0;
+        data[2] = (byte) (r1 >> 8);
+        data[3] = (byte) r1;
+        data[4] = (byte) (r2 >> 8);
+        data[5] = (byte) r2;
+        data[6] = (byte) (r3 >> 8);
+        data[7] = (byte) r3;
     }
 }

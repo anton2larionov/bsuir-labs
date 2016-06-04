@@ -1,8 +1,8 @@
 package idea;
 
-import static idea.Idea.ROUNDS;
-import static idea.Math.addInv;
-import static idea.Math.mulInv;
+import static idea.IDEA.ROUNDS;
+import static idea.MathUtil.addInv;
+import static idea.MathUtil.mulInv;
 
 public final class SubKeys {
 

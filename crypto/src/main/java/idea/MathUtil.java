@@ -4,7 +4,7 @@ package idea;
  * Математические функции.
  * Аргументы и результат находятся в диапазоне 0..0xFFFF.
  */
-public final class Math {
+public final class MathUtil {
 
     // Сложение в аддитивной группе
     public static int add(int a, int b) {
