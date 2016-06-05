@@ -36,11 +36,10 @@ public class Form extends JFrame {
             try {
                 int[] subKeys = new SubKeys(new StringKey(key.getText())).getKeys(crypt);
                 FilesUtil.cryptByIdea(inFile.getText(), outFile.getText(), new IDEA(subKeys));
+                JOptionPane.showMessageDialog(this, "Завершено успешно");
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, ex, "Ошибка", JOptionPane.ERROR_MESSAGE);
-                return;
             }
-            JOptionPane.showMessageDialog(this, "Завершено успешно");
         };
     }
 

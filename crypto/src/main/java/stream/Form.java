@@ -26,7 +26,7 @@ public class Form extends JFrame {
     private JTextField rc4;
 
     public Form() {
-        setTitle("Потоковые алгоритмы");
+        setTitle("Потоковое шифрование");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         setContentPane(rootPanel);
@@ -46,11 +46,10 @@ public class Form extends JFrame {
                 FilesUtil.crypt(
                         inFile.getText(), outFile.getText(),
                         getKeyIterator(), printKey.isSelected());
+                JOptionPane.showMessageDialog(this, "Завершено успешно");
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, ex, "Ошибка", JOptionPane.ERROR_MESSAGE);
-                return;
             }
-            JOptionPane.showMessageDialog(this, "Завершено успешно");
         };
     }
 
