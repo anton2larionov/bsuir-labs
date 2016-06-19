@@ -10,7 +10,7 @@ public class Form extends JFrame {
     private JButton openButton;
     private JTextField outFile;
     private JButton saveButton;
-    private JTextField p, q;
+    private JTextField p, q, e;
     private JTextField r, d;
     private JButton run1, run2;
 
@@ -25,7 +25,7 @@ public class Form extends JFrame {
 
         run1.addActionListener(e -> {
             try {
-                RsaKey rsaKey = new RsaKey(getInt(p), getInt(q));
+                RsaKey rsaKey = new RsaKey(getInt(this.p), getInt(this.q), getInt(this.e));
 
                 new RsaEncrypt(rsaKey.getR(), rsaKey.getE())
                         .encryptFile(inFile.getText(), outFile.getText());

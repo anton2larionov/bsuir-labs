@@ -40,7 +40,7 @@ public class LFSR implements KeyIterator {
         int bit = computeBit();
         System.arraycopy(register, 1, register, 0, N);
         register[N] = bit;
-        return -out;
+        return out;
     }
 
     /**

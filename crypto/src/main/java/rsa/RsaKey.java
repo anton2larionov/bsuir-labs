@@ -11,8 +11,9 @@ public class RsaKey {
     /**
      * @param p число
      * @param q число
+     * @param e открытый ключ
      */
-    public RsaKey(int p, int q) {
+    public RsaKey(int p, int q, int e) {
         if (p == q) {
             throw new IllegalArgumentException("Числа p и q не могут быть равны.");
         }
@@ -28,8 +29,12 @@ public class RsaKey {
             // нельзя найти e, такое что 1 < e < phi
             throw new IllegalArgumentException("Числа p и q слишком малы.");
         }
-        // открытый ключ
-        e = findE(phi);
+        // проверка открытого ключа
+        if (MathUtil.gcd(phi, e) != 1) {
+            // НОД(phi, e) должен быть равен 1
+            throw new IllegalArgumentException("Открытый ключ не взаимно простой со значением функции Эйлера.");
+        }
+        this.e = e;
         // секретный ключ
         d = MathUtil.mulInv(phi, e);
 

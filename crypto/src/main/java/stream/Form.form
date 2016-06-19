@@ -97,7 +97,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="0101010101011011101011"/>
+          <text value="01010101010110111010110"/>
         </properties>
       </component>
       <component id="7af40" class="javax.swing.JTextField" binding="lfsr2">
@@ -107,7 +107,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="111110101010110110001011011010"/>
+          <text value="1111101010101101100010110110101"/>
         </properties>
       </component>
       <component id="fbb1" class="javax.swing.JTextField" binding="lfsr3">
@@ -117,7 +117,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="01101101101000101011011111010111011101"/>
+          <text value="011011011010001010110111110101110111010"/>
         </properties>
       </component>
       <component id="eece2" class="javax.swing.JTextField" binding="rc4">
